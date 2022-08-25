@@ -17,5 +17,6 @@ sudo unzip latest.zip
 #sudo mv /home/nutanix/wordpress/ /var/www/html/
 
 #Changing the permission
+cd /
 sudo chown www-data:www-data -R /var/www/html/wordpress/
 sudo chmod -R 755 /var/www/html/wordpress/
