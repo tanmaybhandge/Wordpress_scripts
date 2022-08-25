@@ -1,5 +1,5 @@
 #Installing apache
-sudo apt install apache2
+sudo apt install -Y apache2
 sudo systemctl enable apache2
 systemctl status apache2
 
