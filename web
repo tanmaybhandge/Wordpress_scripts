@@ -1,0 +1,20 @@
+#Installing apache
+sudo apt install apache2
+sudo systemctl enable apache2
+systemctl status apache2
+
+#Installing php v8
+sudo apt install -y php php-{common,mysql,xml,xmlrpc,curl,gd,imagick,cli,dev,imap,mbstring,opcache,soap,zip,intl}
+php -v
+
+#Installing wget unzip
+sudo apt install wget unzip
+wget https://wordpress.org/latest.zip
+sudo unzip latest.zip
+
+#Moving the WP files
+sudo mv wordpress/ /var/www/html/
+
+#Changing the permission
+sudo chown www-data:www-data -R /var/www/html/wordpress/
+sudo chmod -R 755 /var/www/html/wordpress/
