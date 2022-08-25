@@ -8,11 +8,13 @@ sudo apt install -y php php-{common,mysql,xml,xmlrpc,curl,gd,imagick,cli,dev,ima
 
 #Installing wget unzip
 sudo apt install -y wget unzip
+cd /
+cd /var/www/html
 wget https://wordpress.org/latest.zip
 sudo unzip latest.zip
 
 #Moving the WP files
-sudo mv ~/wordpress/ /var/www/html/
+#sudo mv /home/nutanix/wordpress/ /var/www/html/
 
 #Changing the permission
 sudo chown www-data:www-data -R /var/www/html/wordpress/
