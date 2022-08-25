@@ -8,7 +8,7 @@ sudo apt install -y php php-{common,mysql,xml,xmlrpc,curl,gd,imagick,cli,dev,ima
 php -v
 
 #Installing wget unzip
-sudo apt install wget unzip
+sudo apt install -y wget unzip
 wget https://wordpress.org/latest.zip
 sudo unzip latest.zip
 
