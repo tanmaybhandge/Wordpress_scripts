@@ -9,13 +9,6 @@ echo $INIT_PASSWORD > /root/INIT_PASSWORD
 #yum update -y
 yum install -y httpd php mariadb-server php-mysqlnd expect
 
-chown -R apache:apache /var/www
-chmod 2775 /var/www
-find /var/www -type d -exec sudo chmod 2775 {} \;
-find /var/www -type f -exec sudo chmod 0664 {} \;
-
-systemctl start httpd
-systemctl enable httpd
 systemctl start mariadb
 systemctl enable mariadb
 
