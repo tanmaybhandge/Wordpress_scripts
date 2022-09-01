@@ -1,4 +1,4 @@
-#sudo yum -y update
+sudo yum -y update
 
 #apache installation
 yum -y install httpd
