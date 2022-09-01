@@ -1,4 +1,4 @@
-sudo yum -y update
+#sudo yum -y update
 
 #apache installation
 yum -y install httpd
@@ -21,7 +21,6 @@ yum install php70w-mysql php70w-xml php70w-soap php70w-xmlrpc -y
 #wordpress
 
 sudo yum -y install -y wget unzip
-
 cd /
 cd /var/www/html
 sudo wget https://wordpress.org/latest.zip
