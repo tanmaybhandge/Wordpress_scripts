@@ -1,0 +1,35 @@
+sudo yum -y update
+
+#apache installation
+yum -y install httpd
+sudo systemctl start httpd
+systemctl enable httpd
+
+
+#Disable Firewall
+sudo systemctl stop firewalld
+sudo systemctl disable firewalld
+sudo systemctl restart httpd
+
+
+#PHP
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+yum install php70w -y
+yum install php70w-mysql php70w-xml php70w-soap php70w-xmlrpc -y
+
+#wordpress
+
+sudo yum -y install -y wget unzip
+
+cd /
+cd /var/www/html
+sudo wget https://wordpress.org/latest.zip
+sudo unzip latest.zip
+
+
+cd /
+sudo chgrp -R apache /var/www/html/wordpress/
+sudo chmod -R 755 /var/www/html/wordpress/
+
+sudo systemctl restart httpd
